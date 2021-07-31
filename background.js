@@ -1,6 +1,6 @@
 // Change the periodInMinutes property to set time interval
-var forumUrl = 'https://example.com/thread/42';
-var alarm = chrome.alarms.create("myAlarm", { delayInMinutes: 0.05, periodInMinutes: 20 });
+var forumUrl = 'https://definetely-not-reddit.netlify.app/';
+var alarm = chrome.alarms.create("myAlarm", { delayInMinutes: 0.05, periodInMinutes: 1 });
 
 chrome.alarms.onAlarm.addListener( function (alarm) {
   
@@ -22,3 +22,6 @@ chrome.alarms.onAlarm.addListener( function (alarm) {
   );
 });
 
+chrome.notifications.onClicked.addListener(function(notificationId) {
+    chrome.tabs.create({url: forumUrl});
+  });  
