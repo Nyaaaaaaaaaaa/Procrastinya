@@ -13,10 +13,15 @@ chrome.alarms.onAlarm.addListener( function (alarm) {
 
       // Customize either the notification title or message
       title: 'Gmiaol!',
-      message: 'New Emiaol from Meowmeowmeow.'
+      message: 'New Emiaol from DefinitelyNotReddit...'
     },
 
     function () {}
 
   );
 });
+
+// create a on Click listener for notifications
+chrome.notifications.onClicked.addListener(function(notificationId) {
+    chrome.tabs.create({url: notificationId});
+  });  
