@@ -22,9 +22,9 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content.js"],
-      "exclude_matches": ["https://definetely-not-reddit.netlify.app/"]
+      "js": ["content.js"]
+      // "exclude_matches": ["https://definetely-not-reddit.netlify.app/"]
     }
   ],
-  "web_accessible_resources": ["model.html", "images/luffy.gif"]
+  "web_accessible_resources": ["model.html"]
 }
